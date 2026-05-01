@@ -1,5 +1,6 @@
 # Simulador de Autómatas Finitos y Expresiones Regulares
 
+DESARROLADO POR: 4CM4 HERNÁDEZ RÍOS CRISTIAN SEBASTIAN
 
 ## Descripción General
 
