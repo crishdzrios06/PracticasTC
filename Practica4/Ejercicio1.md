@@ -19,13 +19,13 @@ Sea Σ un alfabeto finito. Un lenguaje L ⊆ Σ* es regular si puede definirse r
 * Símbolos individuales del alfabeto
 * Operaciones de unión, concatenación y cerradura de Kleene
 
-Equivalentemente, un lenguaje es regular si puede ser reconocido por un autómata finito o descrito mediante una expresión regular ([Wikipedia][1]).
+Equivalentemente, un lenguaje es regular si puede ser reconocido por un autómata finito o descrito mediante una expresión regular.
 
 ---
 
 ### 1.2 Interpretación conceptual
 
-Los lenguajes regulares representan la clase más simple dentro de los lenguajes formales, ya que no requieren memoria adicional para su reconocimiento, lo cual implica que pueden ser procesados mediante máquinas de estados finitos ([Wikipedia][2]).
+Los lenguajes regulares representan la clase más simple dentro de los lenguajes formales, ya que no requieren memoria adicional para su reconocimiento, lo cual implica que pueden ser procesados mediante máquinas de estados finitos.
 
 ---
 
@@ -54,7 +54,7 @@ Lenguaje Regular
 
 ### 2.1 Definición formal
 
-Una expresión regular es una construcción algebraica que describe un lenguaje mediante patrones formales definidos sobre un alfabeto, utilizando operadores como unión, concatenación y cerradura de Kleene ([Wikipedia][3]).
+Una expresión regular es una construcción algebraica que describe un lenguaje mediante patrones formales definidos sobre un alfabeto, utilizando operadores como unión, concatenación y cerradura de Kleene.
 
 ---
 
@@ -146,7 +146,7 @@ Tipo 2 → Libres de contexto
 Tipo 3 → Regulares
 ```
 
-Los lenguajes regulares ocupan el nivel más bajo, lo cual implica menor complejidad pero mayor eficiencia computacional ([Wikipedia][1]).
+Los lenguajes regulares ocupan el nivel más bajo, lo cual implica menor complejidad pero mayor eficiencia computacional.
 
 ---
 
@@ -157,7 +157,7 @@ El Teorema de Kleene establece la equivalencia entre:
 * Expresiones regulares
 * Autómatas finitos
 
-Esto implica que cualquier lenguaje reconocido por un autómata finito puede representarse mediante una expresión regular y viceversa ([EITCA Academy][4]).
+Esto implica que cualquier lenguaje reconocido por un autómata finito puede representarse mediante una expresión regular y viceversa.
 
 ---
 
@@ -231,7 +231,7 @@ Uso en herramientas como:
 * sed
 * scripts de automatización
 
-Las expresiones regulares son ampliamente utilizadas en herramientas de procesamiento de texto y sistemas Unix ([Wikipedia][3]).
+Las expresiones regulares son ampliamente utilizadas en herramientas de procesamiento de texto y sistemas Unix.
 
 ---
 
