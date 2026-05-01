@@ -1,0 +1,186 @@
+# Simulador de Autómatas Finitos y Expresiones Regulares
+DESARROLLADO POR:
+4CM4 HERNÁNDEZ RÍOS CRISTIAN SEBASTIAN
+
+## Descripción General
+
+Este proyecto consiste en el desarrollo de un software interactivo orientado al análisis, simulación y transformación de autómatas finitos, integrando los conceptos fundamentales de la Teoría de la Computación.
+
+El sistema ha sido desarrollado de manera incremental a lo largo de múltiples prácticas, permitiendo la evolución progresiva del software mediante la incorporación de nuevas funcionalidades en cada etapa.
+
+El simulador permite trabajar con distintos modelos de autómatas, realizar conversiones entre ellos, aplicar algoritmos formales y utilizar expresiones regulares en contextos prácticos.
+
+---
+
+## Objetivos del Software
+
+* Simular el comportamiento de autómatas finitos deterministas (AFD), no deterministas (AFND) y con transiciones lambda (AFND-λ).
+* Implementar algoritmos de conversión entre modelos formales.
+* Minimizar autómatas deterministas.
+* Convertir autómatas a expresiones regulares mediante eliminación de estados.
+* Aplicar expresiones regulares en problemas reales de validación.
+* Proporcionar una interfaz gráfica interactiva para facilitar el aprendizaje.
+
+---
+
+## Funcionalidades Implementadas
+
+### 1. Creación y Simulación de Autómatas
+
+El sistema permite al usuario:
+
+* Definir estados
+* Definir alfabeto
+* Establecer estado inicial
+* Definir estados de aceptación
+* Ingresar transiciones manualmente
+
+Se soportan:
+
+* AFD
+* AFND
+* AFND con λ
+
+Además, se puede evaluar una cadena de entrada y visualizar el proceso paso a paso.
+
+---
+
+### 2. Importación desde JFLAP
+
+Se implementa la lectura de archivos `.jff`, permitiendo:
+
+* Importar autómatas diseñados en JFLAP
+* Interpretar correctamente estados y transiciones
+* Validar que el autómata sea correcto
+* Mostrar el autómata en la interfaz
+
+---
+
+### 3. Conversión de Autómatas
+
+El sistema incluye:
+
+* Eliminación de transiciones λ
+* Conversión de AFND a AFD (algoritmo de subconjuntos)
+
+Esto permite trabajar con modelos equivalentes deterministas.
+
+---
+
+### 4. Minimización de AFD
+
+Se implementa el algoritmo de minimización, el cual:
+
+* Reduce el número de estados
+* Identifica estados equivalentes
+* Muestra el proceso de separación de clases
+
+---
+
+### 5. Conversión de AFD a Expresión Regular
+
+Se implementa el algoritmo de eliminación de estados, que permite:
+
+* Transformar un AFD en una expresión regular equivalente
+* Mostrar el proceso paso a paso
+* Obtener la expresión final de forma clara
+
+---
+
+### 6. Validadores con Expresiones Regulares
+
+Se desarrollaron casos de uso prácticos:
+
+* Validación de correos electrónicos
+* Validación de números telefónicos
+* Validación de contraseñas
+
+Cada validación incluye:
+
+* Expresión regular utilizada
+* Resultado de validación
+* Retroalimentación al usuario
+
+---
+
+### 7. Operaciones sobre Lenguajes
+
+Se incluyen funciones adicionales:
+
+* Subcadenas
+* Prefijos
+* Sufijos
+* Cerradura de Kleene
+
+---
+
+##  Interfaz Gráfica
+
+El sistema cuenta con una interfaz interactiva desarrollada con Flet, la cual incluye:
+
+* Navegación por menú
+* Secciones organizadas (Autómatas, Validadores, Extras)
+* Visualización paso a paso de procesos
+* Diseño centrado y estructurado tipo aplicación
+
+---
+
+##  Tecnologías Utilizadas
+
+* Lenguaje: Python
+* Framework gráfico: Flet
+* Librerías propias para autómatas
+* Lectura de archivos JFLAP (.jff)
+
+---
+
+##  Estructura del Proyecto
+
+```
+Simulador_Automatas/
+│
+├── automatas/
+├── extras/
+├── utils/
+├── main.py
+├── requirements.txt
+└── README.md
+```
+
+---
+
+##  Ejecución del Proyecto
+
+1. Crear entorno virtual:
+
+```
+py -3.11 -m venv venv
+```
+
+2. Activar entorno:
+
+```
+venv\Scripts\activate
+```
+
+3. Instalar dependencias:
+
+```
+pip install flet
+```
+
+4. Ejecutar:
+
+```
+python main.py
+```
+
+---
+
+##  Conclusión
+
+El desarrollo de este software permitió integrar de manera práctica los conceptos fundamentales de la teoría de autómatas, fortaleciendo la comprensión de los modelos formales y sus aplicaciones.
+
+La implementación progresiva facilitó la construcción de un sistema completo, capaz de resolver problemas tanto teóricos como prácticos dentro del área.
+
+---
