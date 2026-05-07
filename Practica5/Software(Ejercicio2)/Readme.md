@@ -168,7 +168,7 @@ El uso de un entorno virtual evita conflictos entre las librerías del proyecto 
 3.  Cree el entorno virtual ejecutando:
     ```bash
     python -m venv venv
-    ```
+  ```
 
 ### 9.2 Activación del Entorno
 Debe activar el entorno cada vez que desee ejecutar el programa:
@@ -187,6 +187,7 @@ Una vez activado el entorno (verá el texto `(venv)` al inicio de su línea de c
 ```bash
 pip install --upgrade pip
 pip install -r requirements.txt
+```
 
 ## 10. Funcionalidades Detalladas
 
