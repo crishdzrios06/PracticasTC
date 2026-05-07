@@ -149,7 +149,7 @@ pip --version
 
 # Verificación de Motor Graphviz
 dot -V
-
+```
 ---
 
 ## 9. Configuración y Ejecución del Sistema
