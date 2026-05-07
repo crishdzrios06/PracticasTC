@@ -1,0 +1,5 @@
+flet==0.21.2
+graphviz==0.20.3
+visual-automata==1.1.1
+automata-lib==8.4.0
+pydot==2.0.0
