@@ -27,25 +27,46 @@ Este software es una herramienta académica diseñada para el diseño, simulaci�
 
 ---
 
-## 3. Arquitectura del Sistema
+## 3. Arquitectura del Proyecto
 
-La estructura del proyecto sigue una organización modular para separar la lógica de computación de la interfaz gráfica de usuario.
+El software está diseñado bajo un paradigma modular y una arquitectura de capas que separa la lógica matemática de la computación de la capa de presentación visual. Esta organización garantiza la escalabilidad del sistema, facilita la depuración de los algoritmos de transición y permite un mantenimiento eficiente del código fuente.
 
+### 3.1 Estructura de Directorios
+
+La organización jerárquica del código se detalla a continuación:
 ```text
-Simulador-Automatas/
-├── core/                   # Lógica matemática de los autómatas
-│   ├── dfa.py              # Implementación de Autómatas Finitos Deterministas
-│   ├── nfa.py              # Implementación de Autómatas Finitos No Deterministas
-│   └── transitions.py      # Gestión de tablas de transiciones
-├── ui/                     # Componentes de la interfaz gráfica
-│   ├── main_window.py      # Ventana principal
-│   └── canvas.py           # Renderizado de grafos
-├── utils/                  # Herramientas auxiliares
-│   ├── dot_generator.py    # Integración con Graphviz
-│   └── validators.py       # Validación de sintaxis de expresiones regulares
-├── assets/                 # Recursos estáticos (iconos, estilos)
-├── main.py                 # Punto de entrada de la aplicación
-└── requirements.txt        # Dependencias del sistema
+Practica5/
+└── Software(Ejercicio2)/
+    ├── automatas/       # Núcleo lógico: Clases para AFD, AFND y AFND-λ
+    ├── ui/              # Capa de presentación: Vistas y componentes de Flet
+    ├── utils/           # Herramientas de soporte: Manejo de archivos y JFLAP
+    ├── assets/          # Recursos gráficos: Iconos y diagramas generados
+    ├── extras/          # Módulos complementarios y extensiones
+    ├── main.py          # Punto de entrada y orquestador del programa
+    ├── requirements.txt # Registro de dependencias del proyecto
+    └── venv/            # Entorno virtual de Python (aislamiento de librerías)
+ ```
+### 3.2 Descripción de Módulos
+
+El proyecto se divide en componentes especializados para garantizar una separación de responsabilidades clara y un mantenimiento eficiente:
+
+*   **`automatas/`**: Es el núcleo lógico del software. Contiene las implementaciones matemáticas de las quintuplas $Q, \Sigma, \delta, q_0, F$. En este módulo se ejecutan los algoritmos de clausura-$\lambda$, la construcción de subconjuntos para la determinización y el algoritmo de Myhill-Nerode para la minimización de estados.
+*   **`ui/`**: Define la capa de presentación. Desarrollada con el framework **Flet**, esta carpeta contiene los archivos que gestionan la ventana principal, los formularios de entrada de datos, los botones de control y la visualización interactiva de resultados.
+*   **`utils/`**: Provee herramientas auxiliares para el sistema. Incluye los motores de validación para expresiones regulares (regex), así como los adaptadores encargados de convertir la lógica del autómata en archivos de imagen mediante **pydot**.
+*   **`extras/`**: Espacio dedicado a funciones complementarias, como generadores de reportes, utilidades de exportación o extensiones de algoritmos menos frecuentes.
+*   **`main.py`**: Es el orquestador principal. Su función es inicializar la aplicación, configurar el entorno de Flet y enlazar las interacciones del usuario con los algoritmos del núcleo lógico.
+
+---
+
+### 3.3 Flujo de Datos del Sistema
+
+El procesamiento de la información dentro del simulador sigue un flujo estructurado para garantizar la integridad de los resultados:
+
+1.  **Captura de Parámetros:** El usuario ingresa los componentes del autómata (alfabeto, estados, transiciones) o carga un archivo externo `.jff` (JFLAP).
+2.  **Validación Lógica:** El sistema comprueba que la estructura definida cumpla con los requisitos teóricos del tipo de autómata seleccionado (por ejemplo, que un AFD no tenga transiciones múltiples para el mismo símbolo).
+3.  **Ejecución Algorítmica:** Dependiendo de la acción solicitada (Minimizar, Convertir, Eliminar $\lambda$), el software transforma la estructura de datos interna preservando la equivalencia del lenguaje.
+4.  **Generación de Diagrama:** Los datos del autómata se traducen al lenguaje de descripción de grafos DOT. **Graphviz** procesa este archivo para generar un renderizado visual (PNG/SVG) que se muestra en la interfaz.
+5.  **Simulación de Cadenas:** El usuario ingresa una cadena; el motor de simulación recorre el autómata y devuelve un veredicto de "Aceptada" o "Rechazada", detallando el camino de estados recorrido.
 
 ---
 
