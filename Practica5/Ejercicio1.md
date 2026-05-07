@@ -2,7 +2,7 @@
 
 En este ejercicio se trabajó con gramáticas independientes del contexto utilizando la herramienta JFLAP, con el propósito de comprender el proceso de transformación hacia distintas formas normales utilizadas en teoría de la computación. Para ello, primero se definió una gramática inicial y posteriormente se analizaron sus producciones con el fin de identificar qué reglas debían modificarse para cumplir con las restricciones de las formas normales requeridas.
 
-![Gramática original](capturas/tranf.jpg)
+![Gramática original](capturas/orig.jpg)
 
 En la gramática original se pueden observar las producciones utilizadas para generar distintas cadenas a partir del símbolo inicial. Esta etapa permitió verificar la estructura general de la gramática y entender el comportamiento de cada variable antes de realizar cualquier modificación. Además, el uso de JFLAP facilitó la visualización y organización de las producciones dentro de un entorno más práctico e intuitivo.
 
