@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<structure>
+  <type>pda</type>
+  <automaton>
+    <state id="0" name="q0">
+      <x>140</x>
+      <y>160</y>
+      <initial/>
+    </state>
+    <state id="1" name="q1">
+      <x>380</x>
+      <y>160</y>
+      <final/>
+    </state>
+    <transition>
+      <from>0</from>
+      <to>0</to>
+      <read>(</read>
+      <pop>Z</pop>
+      <push>PZ</push>
+    </transition>
+    <transition>
+      <from>0</from>
+      <to>0</to>
+      <read>(</read>
+      <pop>P</pop>
+      <push>PP</push>
+    </transition>
+    <transition>
+      <from>0</from>
+      <to>0</to>
+      <read>)</read>
+      <pop>P</pop>
+      <push></push>
+    </transition>
+    <transition>
+      <from>0</from>
+      <to>1</to>
+      <read></read>
+      <pop>Z</pop>
+      <push>Z</push>
+    </transition>
+  </automaton>
+</structure>
